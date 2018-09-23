@@ -45,4 +45,11 @@ public class FractionTest {
         Fraction newFraction = new Fraction();
         assertTrue(this.fraction.isMenorQue(newFraction));
     }
+
+    @Test void testConstructor() {
+        Fraction fraction = new Fraction();
+        assertEquals(1, fraction.getNumerator());
+        assertEquals(1, fraction.getDenominator());
+    }
+
 }
