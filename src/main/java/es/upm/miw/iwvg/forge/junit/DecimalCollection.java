@@ -42,5 +42,19 @@ public class DecimalCollection {
         }
         return higher;
     }
+    public double lowest() {
+        assert collection != null;
+        if (this.collection.isEmpty()) {
+            throw new ArithmeticException("Empty collection");
+        }
+        double lower = Double.POSITIVE_INFINITY;
+        for (double item : this.collection) {
+            if (item < lower) {
+                lower = item;
+            }
+        }
+        return lower;
+    }
+
 
 }
