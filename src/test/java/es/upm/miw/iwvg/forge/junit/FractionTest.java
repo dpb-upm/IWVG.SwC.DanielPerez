@@ -39,4 +39,10 @@ public class FractionTest {
     void testIsImpropia() {
         assertTrue(new Fraction(10, 2).isImpropia());
     }
+
+    @Test
+    void testIsMenorQue(){
+        Fraction newFraction = new Fraction();
+        assertTrue(this.fraction.isMenorQue(newFraction));
+    }
 }

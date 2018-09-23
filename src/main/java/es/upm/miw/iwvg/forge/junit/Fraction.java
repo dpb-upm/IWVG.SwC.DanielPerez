@@ -7,6 +7,7 @@ public class Fraction {
     private int denominator;
 
     public Fraction(int numerator, int denominator) {
+        assert denominator != 0;
         this.numerator = numerator;
         this.denominator = denominator;
     }
@@ -33,5 +34,10 @@ public class Fraction {
 
     public boolean isImpropia() {
         return !isPropia();
+    }
+
+    public boolean isMenorQue(Fraction newFraction){
+        assert newFraction != null;
+        return this.decimal() < newFraction.decimal();
     }
 }
