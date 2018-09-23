@@ -54,4 +54,10 @@ class PointTest {
         assertEquals(3, point.getZ());
     }
 
+    @Test
+    void testToString() {
+        assertEquals(String.format("Point{x=%d, y=%d, z=%d}", point.getX(), point.getY(), point.getZ()), point.toString());
+    }
+
+
 }
