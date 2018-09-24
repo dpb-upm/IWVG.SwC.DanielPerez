@@ -40,4 +40,8 @@ public class Fraction {
         assert newFraction != null;
         return this.decimal() < newFraction.decimal();
     }
+    public boolean isMayorQue(Fraction newFraction){
+        assert newFraction != null;
+        return this.decimal() > newFraction.decimal();
+    }
 }
