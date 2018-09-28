@@ -51,5 +51,10 @@ public class FractionTest {
         assertEquals(1, fraction.getNumerator());
         assertEquals(1, fraction.getDenominator());
     }
+    @Test
+    void testIsMayorQue(){
+        Fraction newFraction = new Fraction(1,4);
+        assertTrue(this.fraction.isMayorQue(newFraction));
+    }
 
 }
