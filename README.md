@@ -1,4 +1,4 @@
-# Práctica colaborativa IWVG
+# Práctica colaborativa IWVG 
 
 ## Descripción detallada del proyecto
 
