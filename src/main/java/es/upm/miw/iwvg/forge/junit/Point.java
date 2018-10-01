@@ -6,30 +6,34 @@ public class Point {
 
     private int y;
 
-    public Point(int x, int y) {
+    private int z;
+
+    public Point(int x, int y, int z) {
         this.x = x;
         this.y = y;
+        this.z = z;
     }
 
     public Point(int xy) {
-        this(xy, xy);
+        this(xy, xy, xy);
     }
 
     public Point() {
-        this(0, 0);
+        this(0, 0, 0);
     }
 
-    public double module() {
+    public double moduleWithXandY() {
         return Math.sqrt((double) this.x * this.x + this.y * this.y);
     }
 
-    public double phase() {
+    public double phaseWithXandY() {
         return Math.atan((double) this.y / this.x);
     }
 
     public void translateOrigin(Point origin) {
         this.x -= origin.getX();
         this.y -= origin.getY();
+        this.z -= origin.getZ();
     }
 
     public int getX() {
@@ -40,11 +44,16 @@ public class Point {
         return this.y;
     }
 
+    public int getZ(){
+        return this.z;
+    }
+
     @Override
     public String toString() {
         return "Point{" +
                 "x=" + x +
                 ", y=" + y +
+                ", z=" + z +
                 '}';
     }
 }
